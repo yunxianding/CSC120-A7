@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "House",
+            "request": "launch",
+            "mainClass": "House",
+            "projectName": "CSC120-A7_9626d292"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

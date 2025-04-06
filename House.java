@@ -87,7 +87,23 @@ public class House extends Building implements HouseRequirements {
    * @param args
    */
   public static void main(String[] args) {
-    new House("Lawrence House", "99 Green St", 4, false);
+    // Create a new House 
+    House lawrenceHouse = new House("Lawrence House", "99 Green St", 4, false);
+
+    // Create a new Student
+    Student student1 = new Student("Yunxian",  "123", 2028);
+    Student student2 = new Student("Ding",  "456", 2028);
+
+    // Test methods
+    lawrenceHouse.moveIn(student1);
+    System.out.println("Number of residents: " + lawrenceHouse.nResidents()); // Should print 1
+    lawrenceHouse.moveIn(student1); // Should print that the student is already a resident
+    System.out.println(lawrenceHouse.isResident(student1)); // Should print true
+    lawrenceHouse.moveOut(student1);
+    System.out.println(lawrenceHouse.isResident(student1)); // Should print false
+    System.out.println("Number of residents: " + lawrenceHouse.nResidents()); // Should print 0
+    lawrenceHouse.moveOut(student2); // Should print that the student is not a resident
+    System.out.println(lawrenceHouse.hasDiningRoom()); // Should print false
   }
 
 }
