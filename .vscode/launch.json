@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Library",
+            "request": "launch",
+            "mainClass": "Library",
+            "projectName": "CSC120-A7_9626d292"
+        },
+        {
+            "type": "java",
             "name": "House",
             "request": "launch",
             "mainClass": "House",
