@@ -54,6 +54,7 @@ public class Cafe extends Building implements CafeRequirements{
         this.nCups += nCups;
         System.out.println("Restocked inventory: " + nCoffeeOunces + " coffee ounces, " + nSugarPackets + " sugar packets, " + nCreams + " creams, " + nCups + " cups.");
     }
+    
     /**
      * Main method to test the Cafe class.
      * @param args Command-line arguments.
