@@ -59,17 +59,17 @@ public class House extends Building implements HouseRequirements {
     /**
     * Moves a student out of the house if they are a resident.
     * @param s The student to move out of the house.
-    * @return The student who moved out, or null if they were not a resident.
+    * @return The student who moved out.
+    * @throws IllegalArgumentException if the student is not a resident.
     */
     public Student moveOut(Student s) {
-        if (this.residents.contains(s)) {
+      if (this.residents.contains(s)) {
           this.residents.remove(s);
           System.out.println(s.getName() + " has moved out of " + this.getName() + "House.");
           return s;
-        } else {
-          System.out.println(s.getName() + " is not a resident of " + this.getName() + "House.");
-          return null;
-        }
+      } else {
+          throw new IllegalArgumentException(s.getName() + " is not a resident of " + this.getName() + "House.");
+      }
     }
 
     /**
