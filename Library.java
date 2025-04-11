@@ -52,7 +52,7 @@ public class Library extends Building implements LibraryRequirements {
     }
 
     /**
-     * Checks if a title is available in the library.
+     * Checks out a book if it is available in the library.
      * @param title The title to check.
      */
     public void checkOut(String title) {
