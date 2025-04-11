@@ -56,11 +56,15 @@ public class Library extends Building implements LibraryRequirements {
      * @param title The title to check.
      */
     public void checkOut(String title) {
-        if (this.collection.containsKey(title) && this.collection.get(title)) {
-            this.collection.replace(title, false);
-            System.out.println(title + " is checked out.");
+        if (this.collection.containsKey(title)) {
+            if(this.collection.get(title)){
+                this.collection.replace(title, false);
+                System.out.println(title + " is checked out.");
+            } else {
+                throw new IllegalStateException(title + " is already checked out.");
+            }
         } else {
-            System.out.println(title + " is not available for checkout.");
+            throw new IllegalArgumentException(title + " is not in the library collection.");
         }
     }
 
